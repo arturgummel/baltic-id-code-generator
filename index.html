@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="EN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ID code generator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="id-generator-form">
+</head>
+
+<body>
+<div class="container">
+  <p>Generate ID code for selected country.</p>
+  <p>Keep gender/date of birth/age empty to get random values.</p>
+  <form id="id-generator-form">
+    <div>
+      <label for="country">Country:</label>
+      <select id="country" name="country" required="required">
+        <option value="EE-LT">EE/LT</option>
+        <option value="LV-old">LV-old</option>
+        <option value="LV-new">LV-new</option>
+      </select>
+    </div>
+    <div id="gender-container">
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value=""></option>
+        <option value="MALE">Male</option>
+        <option value="FEMALE">Female</option>
+      </select>
+    </div>
+    <div id="date-of-birth-container">
+      <label for="date-of-birth">Date of Birth:</label>
+      <input type="date" id="date-of-birth" name="date-of-birth" min="1800-01-01" />
+    </div>
+    <div id="max-date-container">
+      <label for="max-date">Max date as today:</label>
+      <input type="checkbox" id="max-date" name="max-date" checked/>
+    </div>
+    <div id="age-container">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="0" />
+    </div>
+    <div id="second-LV-digit-container" style="display: none;">
+      <label for="second-LV-digit">Second digit:</label>
+      <input type="number" id="second-LV-digit" name="second-LV-digit" value="2" min="2" max="9" />
+    </div>
+    <button type="submit">Generate</button>
+    <div>
+      <label for="id-code">ID code:</label>
+      <input type="text" id="id-code" name="id-code" title="You can paste id code to validate it by country"/>
+    </div>
+  </form>
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
