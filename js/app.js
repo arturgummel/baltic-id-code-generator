@@ -52,6 +52,8 @@ countryElement.addEventListener("change", (event) => {
     genderContainer.style.display = "";
     dateOfBirthContainer.style.display = "";
     ageContainer.style.display = "";
+    maxDateAsTodayContainer.style.display = "";
+    maxDateAsTodayElement.checked = true;
     setMaxDateASToday();
   }
 });
